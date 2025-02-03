@@ -7,6 +7,7 @@ public class MainArticulo {
 		Articulo pijama = new Articulo();
 		
 		// Asigno valores a los atributos
+		pijama.nombre = "pijama";
 		pijama.precio = 24.5;
 		pijama.cuantosQuedan = 50;
 		
