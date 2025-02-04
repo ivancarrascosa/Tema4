@@ -8,36 +8,44 @@ public class MainPersona {
 		// Creo un escáner
 		Scanner sc = new Scanner(System.in);
 		
+		// Creo variables para almacenar los atributos de los objetos
+		String dni;
+		String nombre;
+		String apellidos;
+		int edad;
+		
 		// Creo los objetos de la clase persona
-		Persona per1 = new Persona();
-		Persona per2 = new Persona();
+		Persona per1;
+		Persona per2;
 		
 		// Pido cada una de las caracteristicas y lo introduzco en las variables
 		System.out.println("Introduzca el nombre de la persona");
-		per1.nombre = sc.nextLine();
+		nombre = sc.nextLine();
 		
 		System.out.println("Introduzca el DNI de la persona");
-		per1.dni = sc.nextLine();
+		dni = sc.nextLine();
 		
 		System.out.println("Introduzca los apellidos de la persona");
-		per1.apellidos = sc.nextLine();
+		apellidos = sc.nextLine();
 		
 		System.out.println("Introduzca la edad de la persona");
-		per1.edad = sc.nextInt();
+		edad = sc.nextInt();
 		sc.nextLine();
 		
+		per1 = new Persona(dni, nombre, apellidos, edad);
 		System.out.println("Introduzca el nombre de la persona");
-		per2.nombre = sc.nextLine();
+		nombre = sc.nextLine();
 		
 		System.out.println("Introduzca el DNI de la persona");
-		per2.dni = sc.nextLine();
+		dni = sc.nextLine();
 		
 		System.out.println("Introduzca los apellidos de la persona");
-		per2.apellidos = sc.nextLine();
+		apellidos = sc.nextLine();
 		
 		System.out.println("Introduzca la edad de la persona");
-		per2.edad = sc.nextInt();
+		edad = sc.nextInt();
 		sc.nextLine();
+		per2 = new Persona(dni, nombre, apellidos, edad);
 		
 		System.out.println(per1.nombre + per1.apellidos + " con DNI " + per1.dni + (per1.edad >= 18 ? " es mayor de edad" : " no es mayor de edad"));
 		System.out.println(per2.nombre + per2.apellidos + " con DNI " + per2.dni + (per2.edad >= 18 ? " es mayor de edad" : " no es mayor de edad"));
