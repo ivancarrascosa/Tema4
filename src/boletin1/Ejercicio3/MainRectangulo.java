@@ -14,23 +14,23 @@ public class MainRectangulo {
 		rect1.y2 = 5;
 		
 		// Asignamos las coordenadas del segundo rectángulo
-		rect2.x1 = 7;
+		rect2.getX1 = 7;
 		rect2.y1 = 9;
 		rect2.x2 = 2;
 		rect2.y2 = 3;
 		Esto era del ej anterior
 		*/
 		// Imprimo las coordenadas de ambos rectángulos
-		System.out.println("Las coordenadas del primer rectángulo son:" + "(" + rect1.x1 + "," + rect1.y1 + ") y (" + rect1.x2 + "," + rect1.y2 + ")");
-		System.out.println("Las coordenadas del segundo rectángulo son:" + "(" + rect2.x1 + "," + rect2.y1 + ") y (" + rect2.x2 + "," + rect2.y2 + ")");
+		System.out.println("Las coordenadas del primer rectángulo son:" + "(" + rect1.getX1() + "," + rect1.getY1() + ") y (" + rect1.getX2() + "," + rect1.getY2() + ")");
+		System.out.println("Las coordenadas del segundo rectángulo son:" + "(" + rect2.getX1() + "," + rect2.getY1() + ") y (" + rect2.getX2() + "," + rect2.getY2() + ")");
 		
 		// Imprimo los perímetros de los rectángulos
-		System.out.println("El perímetro del primer rectángulo es: " + (Math.abs(rect1.x1 - rect1.x2)*2 +  Math.abs(rect1.y1 - rect1.y2)*2));
-		System.out.println("El perímetro del primer rectángulo es: " + (Math.abs(rect2.x1 - rect2.x2)*2 +  Math.abs(rect2.y1 - rect2.y2)*2));
+		System.out.println("El perímetro del primer rectángulo es: " + (Math.abs(rect1.getX1() - rect1.getX2())*2 +  Math.abs(rect1.getY1() - rect1.getY2())*2));
+		System.out.println("El perímetro del primer rectángulo es: " + (Math.abs(rect2.getX1() - rect2.getX2())*2 +  Math.abs(rect2.getY1() - rect2.getY2())*2));
 		
 		// Imprimo las áreas
-		System.out.println("El área del primer rectángulo es: " + (Math.abs(rect1.x1 - rect1.x2) * Math.abs(rect1.y1 - rect1.y2)));
-		System.out.println("El área del primer rectángulo es: " + (Math.abs(rect2.x1 - rect2.x2) * Math.abs(rect2.y1 - rect2.y2)));
+		System.out.println("El área del primer rectángulo es: " + (Math.abs(rect1.getX1() - rect1.getX2()) * Math.abs(rect1.getY1() - rect1.getY2())));
+		System.out.println("El área del primer rectángulo es: " + (Math.abs(rect2.getX1() - rect2.getX2()) * Math.abs(rect2.getY1() - rect2.getY2())));
 	}
 
 }
