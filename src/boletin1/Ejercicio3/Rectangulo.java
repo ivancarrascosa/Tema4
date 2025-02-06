@@ -110,5 +110,63 @@ public class Rectangulo {
 			this.y2 = y2;
 		}
 	}
+	/**
+	 * Setter para las dos coordenadas de la esquina inferior izquierda
+	 * @param x1 coordenada x de la esquina inferior izquierda
+	 * @param y1 coordenada y de la esquina inferior izquierda
+	 */
+	public void setX1Y1(int x1, int y1) {
+		if (x1<x2 && y1<y2) {
+			this.x1 = x1;
+			this.y1 = y1;
+		}
+	}
+	
+	/**
+	 * Setter para las dos coordenadas de la esquina superior derecha
+	 * @param x2 coordenada x de la esquina superior derecha
+	 * @param y2 coordenada y de la esquina superior derecha
+	 */
+	public void setX2Y2(int x2, int y2) {
+		if (x1<x2 && y1<y2) {
+			this.x2 = x2;
+			this.y2 = y2;
+		}
+	}
+	/**
+	 * Método setter para todas las coordenadas de las esquinas inferior izquierda y superior derecha del rectángulo. 
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 */
+	public void setAll(int x1, int y1, int x2, int y2) {
+		if (x1<x2 && y1<y2) {
+			this.x1 = x1;
+			this.y1 = y1;
+			this.x2 = x2;
+			this.y2 = y2;
+		}
+	}
+	
+	/**
+	 * Método para obtener el perímetro de un rectángulo
+	 * @return Perímetro del rectángulo
+	 */
+	public int getPerimetro() {
+		return (Math.abs(this.x1 - this.x2)*2 +  Math.abs(this.y1 - this.y2)*2);
+	}
+	
+	/**
+	 * Método para obtener el área de un rectángulo 
+	 * @return Área del rectángulo
+	 */
+	public double getArea() {
+		return (Math.abs(this.x1 - this.x2) * Math.abs(this.y1 - this.y2));
+	}
+	
+	public String toString() {
+		return ("(" + this.x1 + "," + this.y1 + ") y (" + this.x2 + "," + this.y2 + ")");
+	}
 
 }

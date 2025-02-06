@@ -82,6 +82,43 @@ public class Articulo {
 			this.cuantosQuedan = cuantosQuedan;
 		}
 	}
+	/**
+	 * Método para devolver el precio con IVA de un producto
+	 * @return Precio con IVA incluido del producto
+	 */
+	public double getPVP() {
+		return (this.precio * Articulo.IVA);
+	}
 	
-
+	/**
+	 * Método para saber el precio de un producto con un porcentaje de descuento (IVA incluido)
+	 * @param descuento porcentaje de descuento que le queremos hacer al producto
+	 * @return Precio del artículo con el descuento aplicado
+	 */
+	public double getPVPDescuento(double descuento) {
+		return (this.precio * Articulo.IVA * (1 - descuento/100));
+	}
+	
+	/**
+	 * Método que representa la venta de un producto y resta la cantidad vendida de la cantidad que queda del artículo
+	 * @param cantidad cantidad vendida del Artículo
+	 * @return true si es posible vender esa cantidad, false si no hay suficiente stock 
+	 */
+	public boolean vender(int cantidad) {
+		boolean posible = true;
+		if (cantidad > this.cuantosQuedan) {
+			posible = false;
+		} else {
+			this.cuantosQuedan = this.cuantosQuedan - cantidad;
+		}
+		return posible;
+	}
+	// Preguntar a elena por el método almacenar. 
+	/**
+	 * Método que devuelve en un string el nombre del artículo, su precio y las unidades que quedan 
+	 * @return String con el nombre del artículo, su precio y cuantos quedan
+	 */
+	public String toString() {
+		return ("Nombre: " + this.nombre + ", precio:" + this.precio + ", cuantos quedan:" + this.cuantosQuedan);
+	}
 }

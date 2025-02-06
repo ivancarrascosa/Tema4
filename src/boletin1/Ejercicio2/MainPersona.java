@@ -50,6 +50,8 @@ public class MainPersona {
 		System.out.println(per1.getNombre() + per1.getApellidos() + " con DNI " + per1.getDni() + (per1.getEdad() >= 18 ? " es mayor de edad" : " no es mayor de edad"));
 		System.out.println(per2.getNombre() + per2.getApellidos() + " con DNI " + per2.getDni() + (per2.getEdad() >= 18 ? " es mayor de edad" : " no es mayor de edad"));
 		
+		System.out.println(per1.toString());
+		
 		sc.close();
 	}
 

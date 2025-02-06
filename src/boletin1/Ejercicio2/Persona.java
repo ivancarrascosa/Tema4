@@ -113,5 +113,34 @@ public class Persona {
 			this.edad = edad;
 		}
 	}
+	
+	/**
+	 * Método para saber si una persona es mayor de edad 
+	 * @return true si la persona es mayor de edad, false si no lo es
+	 */
+	public boolean esMayorEdad() {
+		return (this.edad >= 18);
+	}
+	
+	/**
+	 * Método para saber si una persona es jubilada o no
+	 * @return true si la persona es jubilada, false si no lo es
+	 */
+	public boolean esJubilado() {
+		return (this.edad >= 65);
+	}
+	
+	/**
+	 * Método para saber la diferencia de edad entre dos personas 
+	 * @param p Persona con la que queremos saber la diferencia de edad
+	 * @return diferencia de edad
+	 */
+	public int diferenciaEdad(Persona p) {
+		return Math.abs(this.edad - p.edad);
+	}
+	
+	public String toString() {
+		return ("DNI: " + this.dni + ", Nombre: " + this.nombre + ", apellidos: " + this.apellidos + ", edad:" + this.edad);
+	}
 
 }
