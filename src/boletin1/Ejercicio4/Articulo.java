@@ -113,7 +113,14 @@ public class Articulo {
 		}
 		return posible;
 	}
-	// Preguntar a elena por el método almacenar. 
+	/**
+	 * Método que aumenta el stock de un objeto 
+	 * @param cantidad unidades en las que queremos aumentar el objeto
+	 */
+	public void almacenar(int cantidad){
+		this.cuantosQuedan += cantidad;
+	}
+	
 	/**
 	 * Método que devuelve en un string el nombre del artículo, su precio y las unidades que quedan 
 	 * @return String con el nombre del artículo, su precio y cuantos quedan

@@ -33,6 +33,7 @@ public class MainRectangulo {
 		System.out.println("El área del primer rectángulo es: " + (Math.abs(rect2.getX1() - rect2.getX2()) * Math.abs(rect2.getY1() - rect2.getY2())));
 		
 		System.out.println(rect1.getPerimetro());
+		System.out.println(rect1);
 	}
 
 }

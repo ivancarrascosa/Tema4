@@ -138,7 +138,10 @@ public class Persona {
 	public int diferenciaEdad(Persona p) {
 		return Math.abs(this.edad - p.edad);
 	}
-	
+	/**
+	 * Método para devolver como string el objeto dado
+	 * @return String con los atributos del objeto
+	 */
 	public String toString() {
 		return ("DNI: " + this.dni + ", Nombre: " + this.nombre + ", apellidos: " + this.apellidos + ", edad:" + this.edad);
 	}

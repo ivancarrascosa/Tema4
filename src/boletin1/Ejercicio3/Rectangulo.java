@@ -164,7 +164,10 @@ public class Rectangulo {
 	public double getArea() {
 		return (Math.abs(this.x1 - this.x2) * Math.abs(this.y1 - this.y2));
 	}
-	
+	/**
+	 * Método para devolver la información del objeto como String
+	 * @return String con la informción del objeto
+	 */
 	public String toString() {
 		return ("(" + this.x1 + "," + this.y1 + ") y (" + this.x2 + "," + this.y2 + ")");
 	}
