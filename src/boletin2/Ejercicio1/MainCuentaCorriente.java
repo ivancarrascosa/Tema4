@@ -1,0 +1,10 @@
+package boletin2.Ejercicio1;
+
+public class MainCuentaCorriente {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

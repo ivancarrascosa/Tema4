@@ -158,7 +158,7 @@ public class Rectangulo {
 	}
 	
 	/**
-	 * Método para obtener el área de un rectángulo 
+	 * Calcula el área del rectángulo en base a las coordenadas
 	 * @return Área del rectángulo
 	 */
 	public double getArea() {
