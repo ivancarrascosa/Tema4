@@ -1,7 +1,5 @@
 package boletin2.Ejercicio4;
 
-import java.util.Objects;
-
 /**
  * Clase que almacena las pizzas pedidas en un restaurante con su código unico para cada pizza, tmaño, tipo y estado
  */
@@ -25,12 +23,12 @@ public class Pizza {
 	/**
 	 * Tamaño de la pizza
 	 */
-	private Tamaño tamaño;
+	private Tamaño tamaño = Tamaño.MEDIANA;
 	
 	/**
 	 * Tipo de la pizza
 	 */
-	private Tipo tipo;
+	private Tipo tipo = Tipo.MARGARITA;
 	
 	/**
 	 * Estado de la pizza
