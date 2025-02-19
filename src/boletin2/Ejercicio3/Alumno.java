@@ -14,6 +14,12 @@ public class Alumno {
 	 */
 	private float notaMedia;
 	
+	public Alumno(String nombre) {
+		if (nombre != null && !nombre.isBlank() ) {
+			this.nombre = nombre;
+		}
+	}
+	
 	/**
 	 * Constructor de la clase para crear un alumno con su nombre y nota media
 	 * @param nombre nombre del alumno

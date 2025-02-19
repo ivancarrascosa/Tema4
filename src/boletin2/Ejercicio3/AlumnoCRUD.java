@@ -14,4 +14,32 @@ public class AlumnoCRUD {
 				System.out.println("-------------------");
 			}
 		}
+		
+		public boolean añadirAlumno(Alumno alumno) {
+			return alumnos.add(alumno);
+		}
+		
+		public Alumno buscarAlumno(Alumno alumno){
+			Alumno a = null;
+			for (Alumno alumnoTemp : alumnos) {
+				if (alumnoTemp.equals(alumno)) {
+					a = alumnoTemp;
+				}
+			}
+			return a;
+		}
+		
+		public boolean borrarAlumno(Alumno alumno){
+			boolean res = false;
+			for (Alumno alumnoTemp : alumnos) {
+				if (alumnoTemp.equals(alumno) ) {
+					alumno = alumnoTemp;
+					res = true;
+				}				
+				}
+			if (res) {
+				alumnos.remove(alumno);
+			}
+			return res;
+		}
 }
