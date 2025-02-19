@@ -35,6 +35,9 @@ public class Pizza {
 	 */
 	private Estado estado = Estado.PEDIDA;
 	
+	public Pizza(int codigo) {
+		this.codigo = codigo;
+	}
 	/**
 	 * Constructor con el código, tamaño y tipo de la pizza
 	 * @param codigo codigo de la pizza
