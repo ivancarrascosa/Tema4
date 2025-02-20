@@ -1,4 +1,7 @@
 package boletin1.Ejercicio4;
+
+import java.util.Objects;
+
 /**
  * Clase artículo en la que vamos a tener los atributos nombre, precio, iva y cuantosQuedan
  */
@@ -21,6 +24,16 @@ public class Articulo {
 	private int cuantosQuedan = 0;
 	
 	/**
+	 * Constructor con solo el atributo nombre
+	 * @param nombre del artículo
+	 */
+	public Articulo(String nombre) {
+		if (nombre != null && !nombre.isBlank()) {
+			this.nombre = nombre;
+		}
+	}
+
+	/**
 	 * Constructor de la clase Artículo sin el iva, que es una constante
 	 * @param nombre nombre del producto
 	 * @param precio precio del producto
@@ -33,6 +46,7 @@ public class Articulo {
 			this.cuantosQuedan = cuantosQuedan;
 		}
 	}
+	
 	
 	/**
 	 * Get para obtener el nombre de un artículo
@@ -128,4 +142,21 @@ public class Articulo {
 	public String toString() {
 		return ("Nombre: " + this.nombre + ", precio:" + this.precio + ", cuantos quedan:" + this.cuantosQuedan);
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		Articulo other = (Articulo) obj;
+		return nombre.equals(other.nombre);
+	}
+	
+
+	
+	
+	
+	
 }
