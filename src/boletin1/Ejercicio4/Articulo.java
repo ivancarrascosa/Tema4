@@ -55,15 +55,7 @@ public class Articulo {
 	public String getNombre() {
 		return nombre;
 	}
-	/**
-	 * Método para cambiar el nombre de un artículo
-	 * @param nombre nombre que queremos establecer al artículo
-	 */
-	public void setNombre(String nombre) {
-		if (nombre != null && !nombre.isBlank() ) {
-			this.nombre = nombre;
-		}
-	}
+
 	/**
 	 * Obtener el precio de un artículo
 	 * @return el precio del artículo

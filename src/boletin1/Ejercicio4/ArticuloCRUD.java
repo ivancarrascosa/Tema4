@@ -28,15 +28,7 @@ public class ArticuloCRUD {
 	 * @return True si el artículo se encontraba en el conjunto y se ha eliminado, false si no se ha encontrado
 	 */
 	public boolean bajaArticulo(Articulo art) {
-		boolean encontrado = false;
-		if(buscarArticulo(art) != null) {
-			encontrado = true;
-			art = buscarArticulo(art);
-		}
-		if (encontrado) {
-			articulos.remove(art);
-		}
-		return encontrado;
+		return articulos.remove(art);
 	}
 	
 	public Articulo cambiarPrecio(Articulo art, double precio) {
