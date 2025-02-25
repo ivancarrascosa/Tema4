@@ -1,5 +1,7 @@
 package boletin2.Ejercicio1;
 
+import java.util.Objects;
+
 /**
  * Clase para almacenar las cuentas corrientes de las personas con las distintas
  * operaciones que se pueden realizar con estas.
@@ -26,7 +28,16 @@ public class CuentaCorriente {
 	 * Nacionalidad de la persona
 	 */
 	private NACION nacionalidad = NACION.ESPAÑOLA;
-
+	
+	/**
+	 * Constructor con DNI
+	 * @param DNI de la cuenta corriente
+	 */
+	public CuentaCorriente(String DNI) {
+		if (DNI != null && !DNI.isBlank()) {
+			this.DNI = DNI;
+		}
+	}
 	/**
 	 * Constructor con DNI y saldo
 	 * 
@@ -37,8 +48,10 @@ public class CuentaCorriente {
 		if (DNI != null && !DNI.isBlank()) {
 			this.DNI = DNI;
 		}
-
-		this.saldo = saldo;
+		if (saldo > 0) {
+			this.saldo = saldo;
+		}
+		
 	}
 
 	/**
@@ -51,7 +64,9 @@ public class CuentaCorriente {
 	public CuentaCorriente(String DNI, String nombre, float saldo) {
 		this.DNI = DNI;
 		this.nombre = nombre;
-		this.saldo = saldo;
+		if (saldo > 0) {
+			this.saldo = saldo;
+		}
 
 	}
 	/**
@@ -112,6 +127,15 @@ public class CuentaCorriente {
 		return saldo;
 	}
 	/**
+	 * Setter para el saldo de la persona
+	 * @param saldo saldo de la persona
+	 */
+	public void setSaldo(float saldo) {
+		if (saldo > 0) {
+			this.saldo = saldo;
+		}
+	}
+	/**
 	 * Getter para la nacionalidad de la persona 
 	 * @return nacionalidad de la persona
 	 */
@@ -155,6 +179,11 @@ public class CuentaCorriente {
 		return "DNI=" + DNI + ", nombre=" + nombre + ", saldo=" + saldo + "€, nacionalidad="
 				+ nacionalidad;
 	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(DNI);
+	}
+	
 	/**
 	 * Método equals que compara los objetos
 	 * @return si el DNI y el nombre son iguales
@@ -162,8 +191,9 @@ public class CuentaCorriente {
 	@Override
 	public boolean equals(Object obj) {
 		CuentaCorriente other = (CuentaCorriente) obj;
-		return this.DNI.equals(other.DNI) && this.nombre.equals(other.nombre);
+		return this.DNI.equals(other.DNI);
 	}
+	
 	
 	
 	
