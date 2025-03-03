@@ -38,9 +38,7 @@ public class MainAlumno {
 				System.out.println("Introduzca la nueva nota media del alumno");
 				notaAlumno = reader.nextFloat();
 				reader.nextLine();
-				alumno = alumnos.buscarAlumno(alumno);
-				if (alumno != null) {
-					alumno.setNotaMedia(notaAlumno);
+				if (alumnos.cambiarNota(alumno, notaAlumno)) {
 					System.out.println("Nota cambiada correctamente.");
 				} else {
 					System.out.println("No se encontró a este alumno.");

@@ -42,4 +42,14 @@ public class AlumnoCRUD {
 			}
 			return res;
 		}
+		
+		public boolean cambiarNota(Alumno alumno, float nota) {
+			boolean res = false;
+			alumno = buscarAlumno(alumno);
+			if (alumno != null) {
+				alumno.setNotaMedia(nota);
+				res = true;
+			}
+			return res;
+		}
 }
