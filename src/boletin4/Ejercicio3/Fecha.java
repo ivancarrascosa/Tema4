@@ -6,10 +6,25 @@ package boletin4.Ejercicio3;
  * correcta
  */
 public class Fecha {
+	/**
+	 * Dia de la fecha
+	 */
 	private int dia = 1;
+	/**
+	 * Mes de la fecha
+	 */
 	private int mes = 1;
+	/**
+	 * Año de la fecha
+	 */
 	private int año = 1970;
-
+	
+	/**
+	 * Constructor de la fecha con todos los atributos
+	 * @param dia de la fecha
+	 * @param mes de la fecha
+	 * @param año de la fecha
+	 */
 	public Fecha(int dia, int mes, int año) {
 		if (año > 0) {
 			this.año = año;
@@ -25,11 +40,19 @@ public class Fecha {
 		}
 
 	}
-
+	
+	/**
+	 * Metodo que comprueba si el año es bisiesto
+	 * @return true si es bisiesto, false si no lo es
+	 */
 	public boolean esBisiesto() {
 		return (this.año % 4 == 0 && this.año % 100 != 0) || this.año % 400 == 0;
 	}
-
+	
+	/**
+	 * Método que comprueba si la fecha es correcta
+	 * @return true si lo es, false si no lo es
+	 */
 	public boolean fechaCorrecta() {
 		boolean res = false;
 		switch (this.mes) {
@@ -59,7 +82,9 @@ public class Fecha {
 		
 		return res;
 	}
-	
+	/**
+	 * Método que avanz un día en la fecha
+	 */
 	public void diaSiguiente() {
 		this.dia += 1;
 		if (!this.fechaCorrecta()) {
@@ -72,6 +97,9 @@ public class Fecha {
 		} 
 	}
 	
+	/**
+	 * Método que devuelve la fecha en forma de String del tipo dd-mm-yy
+	 */
 	@Override
 		public String toString() {
 			return this.dia + "-" + this.mes + "-" + this.año;
