@@ -15,27 +15,27 @@ public class Disco {
 	/**
 	 * Código del disco
 	 */
-	int codigo;
+	private int codigo;
 
 	/**
 	 * autor del disco
 	 */
-	String autor;
+	private String autor;
 
 	/**
 	 * Título del disco
 	 */
-	String titulo;
+	private String titulo;
 
 	/**
 	 * Duración del disco
 	 */
-	int duracion;
+	private int duracion;
 
 	/**
 	 * Género del disco
 	 */
-	Genero genero;
+	private Genero genero = Genero.POP;
 	
 	/**
 	 * Constuctor con el parámetro código
@@ -145,8 +145,10 @@ public class Disco {
 	 */
 	private boolean comprobarGenero(String genero) {
 		boolean res = false;
-		switch (genero) {
-		case "ROCK", "POP", "JAZZ", "BLUES" -> res = true;
+		if (genero != null) {
+			switch (genero) {
+			case "ROCK", "POP", "JAZZ", "BLUES" -> res = true;
+			}
 		}
 		return res;
 
