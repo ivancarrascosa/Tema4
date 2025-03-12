@@ -42,6 +42,30 @@ public class Fecha {
 	}
 	
 	/**
+	 * Getter para el día
+	 * @return día de la fecha
+	 */
+	public int getDia() {
+		return dia;
+	}
+
+	/**
+	 * Getter para el mes
+	 * @return mes de la fecha
+	 */
+	public int getMes() {
+		return mes;
+	}
+	
+	/**
+	 * Getter para el año
+	 * @return año de la fecha
+	 */
+	public int getAño() {
+		return año;
+	}
+
+	/**
 	 * Metodo que comprueba si el año es bisiesto
 	 * @return true si es bisiesto, false si no lo es
 	 */
